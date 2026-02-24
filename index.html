@@ -23,23 +23,24 @@ overflow-x:hidden;
 
 /* ===== NAVBAR ===== */
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(5,11,29,0.9);
-backdrop-filter:blur(10px);
+padding:18px 7%;
+position:fixed;
+width:100%;
+top:0;
+left:0;
 z-index:1000;
+background:rgba(5,11,29,.9);
+backdrop-filter:blur(8px);
 }
 
 .logo{
+font-size:26px;
 font-weight:800;
-font-size:28px;
 color:#ffb020;
+letter-spacing:1px;
 }
 
 .nav-links{
@@ -60,101 +61,99 @@ color:#ffb020;
 
 .btn{
 background:#ff9f1a;
-padding:12px 24px;
+padding:11px 22px;
 border-radius:10px;
-color:#fff;
 font-weight:600;
+color:white;
 text-decoration:none;
 transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(255,160,0,.5);
+box-shadow:0 10px 25px rgba(255,160,0,.4);
 }
 
 /* ===== HERO ===== */
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
+padding:140px 7% 90px;
 text-align:center;
-padding:120px 7% 60px;
-background:radial-gradient(circle at top right,#0f204f,#050b1d);
+background:radial-gradient(circle at top right,#132a63,#050b1d);
 }
 
 .hero h1{
-font-size:60px;
-font-weight:800;
+font-size:58px;
 line-height:1.2;
-max-width:900px;
+font-weight:800;
+max-width:950px;
+margin:auto;
 }
 
-.hero h1 span{
+.hero span{
 color:#ffb020;
 }
 
 .hero p{
-margin:25px auto;
 max-width:700px;
-opacity:.8;
+margin:25px auto;
+opacity:.85;
 font-size:18px;
 }
 
 .hero-buttons{
 display:flex;
-gap:20px;
+gap:15px;
 justify-content:center;
 flex-wrap:wrap;
+margin-top:25px;
 }
 
-/* ===== FEATURE BOXES ===== */
-.features{
-padding:80px 7%;
+/* ===== STATS STRIP ===== */
+.stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+padding:50px 7%;
 }
 
-.feature{
+.stat{
 background:#0b1535;
-padding:30px;
-border-radius:18px;
+padding:26px;
+border-radius:16px;
 text-align:center;
+border:1px solid rgba(255,255,255,.08);
 transition:.3s;
-border:1px solid rgba(255,255,255,0.08);
 }
 
-.feature:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,.4);
+.stat:hover{
+transform:translateY(-6px);
 }
 
-/* ===== PORTFOLIO ===== */
-.section-title{
+/* ===== SECTION TITLE ===== */
+.title{
 text-align:center;
-padding:60px 20px 30px;
+padding:70px 20px 25px;
 }
 
-.section-title h2{
-font-size:45px;
+.title h2{
+font-size:42px;
 font-weight:800;
 }
 
+/* ===== PORTFOLIO ===== */
 .portfolio{
-padding:20px 7% 80px;
+padding:20px 7% 70px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+gap:22px;
 }
 
 .card{
 background:#0b1535;
-border-radius:20px;
+border-radius:18px;
 overflow:hidden;
-transition:.4s;
 border:1px solid rgba(255,255,255,.08);
+transition:.3s;
 }
 
 .card img{
@@ -164,25 +163,47 @@ object-fit:cover;
 }
 
 .card h3{
-padding:20px;
+padding:18px;
+font-size:20px;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,.45);
+transform:translateY(-8px);
+box-shadow:0 18px 35px rgba(0,0,0,.45);
+}
+
+/* ===== PROCESS ===== */
+.process{
+padding:20px 7% 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:#0b1535;
+padding:25px;
+border-radius:16px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.step h4{
+color:#ffb020;
+margin-bottom:12px;
 }
 
 /* ===== PRICING ===== */
 .pricing{
-padding:70px 7%;
+padding:20px 7% 80px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:22px;
 }
 
 .plan{
 background:#0b1535;
-padding:35px;
+padding:32px;
 border-radius:18px;
 border:1px solid rgba(255,255,255,.1);
 transition:.3s;
@@ -190,7 +211,6 @@ transition:.3s;
 
 .plan.popular{
 background:#ff9f1a;
-color:#fff;
 transform:scale(1.03);
 }
 
@@ -202,17 +222,20 @@ margin-bottom:10px;
 .price{
 font-size:40px;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:18px;
+}
+
+.plan p{
+margin-bottom:8px;
 }
 
 /* ===== CTA ===== */
 .cta{
-margin:80px 7%;
+margin:60px 7%;
 background:#ff9f1a;
 padding:60px 20px;
 border-radius:20px;
 text-align:center;
-color:#fff;
 }
 
 .cta h2{
@@ -221,48 +244,48 @@ margin-bottom:15px;
 }
 
 .cta .btn{
-background:#07132f;
+background:#081530;
 }
 
 /* ===== FOOTER ===== */
 footer{
-background:#040915;
+background:#030814;
 padding:50px 7%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 footer h4{
-margin-bottom:15px;
+margin-bottom:12px;
 color:#ffb020;
 }
 
 footer a{
 display:block;
-color:#ddd;
 text-decoration:none;
-margin-bottom:10px;
-opacity:.8;
+color:#ddd;
+margin-bottom:8px;
+opacity:.85;
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
 .hero h1{
-font-size:36px;
+font-size:34px;
 }
 
-.section-title h2{
-font-size:32px;
-}
-
-nav{
-padding:15px 5%;
+.title h2{
+font-size:30px;
 }
 
 .nav-links{
 display:none;
+}
+
+nav{
+padding:15px 5%;
 }
 
 }
@@ -280,32 +303,30 @@ display:none;
 <a href="#">Process</a>
 <a href="#">Contact</a>
 </div>
-<a class="btn" href="#">Get Started</a>
+<a href="#" class="btn">Get Started</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<div>
 <h1>Transform Your <span>Local Business</span> Into A Digital Empire</h1>
-<p>We craft stunning, high-conversion websites that help local businesses stand out and grow faster.</p>
+<p>We build high-converting premium websites that help local brands dominate online.</p>
 <div class="hero-buttons">
-<a href="#" class="btn">View Our Work</a>
-<a href="#" class="btn" style="background:#0b1535;">Start Your Project</a>
-</div>
+<a href="#" class="btn">View Demos</a>
+<a href="#" class="btn" style="background:#0b1535">Start Project</a>
 </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-<div class="feature">⚡ 24-48 Hour Delivery</div>
-<div class="feature">📱 Mobile Perfected</div>
-<div class="feature">🎨 Premium Design</div>
-<div class="feature">🚀 High Conversion</div>
+<!-- STATS -->
+<section class="stats">
+<div class="stat">⚡ Fast Delivery</div>
+<div class="stat">📱 Mobile Optimized</div>
+<div class="stat">🎨 Premium Design</div>
+<div class="stat">🚀 Conversion Focused</div>
 </section>
 
 <!-- PORTFOLIO -->
-<div class="section-title">
-<h2>Premium Websites</h2>
+<div class="title">
+<h2>Our Websites</h2>
 </div>
 
 <section class="portfolio">
@@ -316,13 +337,25 @@ display:none;
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
-<h3>KEFI Boutique Café</h3>
+<h3>KEFI Café</h3>
 </div>
 </section>
 
+<!-- PROCESS -->
+<div class="title">
+<h2>Our Process</h2>
+</div>
+
+<section class="process">
+<div class="step"><h4>1. Strategy</h4><p>Understanding your business and goals.</p></div>
+<div class="step"><h4>2. Design</h4><p>Creating premium modern layouts.</p></div>
+<div class="step"><h4>3. Development</h4><p>Fast, responsive website build.</p></div>
+<div class="step"><h4>4. Launch</h4><p>Go live and start getting leads.</p></div>
+</section>
+
 <!-- PRICING -->
-<div class="section-title">
-<h2>Investment In Your Success</h2>
+<div class="title">
+<h2>Pricing</h2>
 </div>
 
 <section class="pricing">
@@ -330,47 +363,47 @@ display:none;
 <div class="plan">
 <h3>Starter</h3>
 <div class="price">₹1,999</div>
-<p>One page website</p>
-<p>Mobile Responsive</p>
-<p>Contact Buttons</p>
+<p>Single page</p>
+<p>Mobile responsive</p>
+<p>Fast delivery</p>
 </div>
 
 <div class="plan popular">
 <h3>Pro</h3>
 <div class="price">₹2,999</div>
-<p>Everything in Starter</p>
-<p>Premium Layout</p>
-<p>Social Media Integration</p>
+<p>Premium layout</p>
+<p>Animations</p>
+<p>Social integration</p>
 </div>
 
 <div class="plan">
 <h3>Premium</h3>
 <div class="price">₹5,999</div>
-<p>Everything in Pro</p>
-<p>Advanced Layout</p>
-<p>Professional Branding</p>
+<p>Advanced design</p>
+<p>Branding layout</p>
+<p>Priority support</p>
 </div>
 
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Ready To Dominate Your Market?</h2>
-<p>Join hundreds of successful local businesses.</p>
+<h2>Ready To Build Your Empire?</h2>
+<p>Let’s launch your premium website today.</p>
 <br>
-<a href="#" class="btn">Message us on WhatsApp</a>
+<a href="#" class="btn">Contact Now</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
 <div>
 <h4>Empire Sites</h4>
-<p>Transforming local businesses into digital empires.</p>
+<p>Building digital empires for local businesses.</p>
 </div>
 
 <div>
-<h4>Quick Links</h4>
-<a href="#">Demo Websites</a>
+<h4>Links</h4>
+<a href="#">Demos</a>
 <a href="#">Pricing</a>
 <a href="#">Process</a>
 </div>
@@ -385,8 +418,8 @@ display:none;
 <div>
 <h4>Contact</h4>
 <a href="#">+91 83568 73821</a>
-<a href="#">WhatsApp Us</a>
-<a href="#">@empire.sites</a>
+<a href="#">WhatsApp</a>
+<a href="#">Instagram</a>
 </div>
 </footer>
 
