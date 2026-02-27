@@ -8,418 +8,317 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#050b1d;color:#fff;overflow-x:hidden}
+.container{width:90%;max-width:1300px;margin:auto}
 
-body{
-background:#050b1d;
-color:white;
-overflow-x:hidden;
-}
-
-/* ===== NAVBAR ===== */
+/* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 7%;
-position:fixed;
-width:100%;
-top:0;
-left:0;
-z-index:1000;
-background:rgba(5,11,29,.9);
+position:fixed;width:100%;top:0;left:0;
+background:rgba(3,8,24,.95);
 backdrop-filter:blur(8px);
+z-index:999;
 }
+.nav-wrap{height:75px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:34px;font-weight:800;color:#ffb020}
+.menu{display:flex;gap:35px}
+.menu a{color:#fff;text-decoration:none;font-weight:600}
+.cta{background:#ff9912;padding:10px 20px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
 
-.logo{
-font-size:26px;
-font-weight:800;
-color:#ffb020;
-letter-spacing:1px;
-}
-
-.nav-links{
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-color:#fff;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#ffb020;
-}
-
-.btn{
-background:#ff9f1a;
-padding:11px 22px;
-border-radius:10px;
-font-weight:600;
-color:white;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(255,160,0,.4);
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero{
-padding:140px 7% 90px;
+padding:150px 0 110px;
 text-align:center;
-background:radial-gradient(circle at top right,#132a63,#050b1d);
+background:radial-gradient(circle at right,#132a63,#050b1d);
 }
-
-.hero h1{
-font-size:58px;
-line-height:1.2;
-font-weight:800;
-max-width:950px;
-margin:auto;
-}
-
-.hero span{
+.badge{
+display:inline-block;
+padding:7px 18px;
+border:1px solid rgba(255,170,0,.3);
+border-radius:30px;
 color:#ffb020;
+margin-bottom:20px;
 }
-
+.hero h1{
+font-size:72px;
+font-weight:800;
+line-height:1.1;
+}
+.orange{color:#ffb020}
+.blue{color:#3ea9ff}
 .hero p{
 max-width:700px;
-margin:25px auto;
-opacity:.85;
+margin:20px auto;
+opacity:.8;
 font-size:18px;
 }
-
-.hero-buttons{
-display:flex;
-gap:15px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:25px;
+.hero-btns{
+display:flex;justify-content:center;gap:12px;flex-wrap:wrap
 }
+.btn1{background:#ff9912;padding:14px 30px;border-radius:10px;color:#fff;text-decoration:none}
+.btn2{border:1px solid rgba(255,255,255,.2);padding:14px 30px;border-radius:10px;color:#fff;text-decoration:none}
 
-/* ===== STATS STRIP ===== */
-.stats{
+/* FEATURES */
+.features-section{padding:50px 0}
+.features-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:20px;
-padding:50px 7%;
 }
-
-.stat{
-background:#0b1535;
-padding:26px;
-border-radius:16px;
+.feature-box{
+background:#0a1433;
+border:1px solid rgba(255,255,255,.06);
+border-radius:18px;
+padding:28px;
 text-align:center;
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
 }
-
-.stat:hover{
-transform:translateY(-6px);
+.icon{
+width:55px;height:55px;margin:auto;
+display:flex;align-items:center;justify-content:center;
+border-radius:14px;font-size:24px;
 }
+.orange-bg{background:#ff9f1a}
+.blue-bg{background:#27a9ff}
+.pink-bg{background:#ff4edb}
+.green-bg{background:#22d69b}
+.feature-box h3{margin-top:14px;font-size:20px}
 
-/* ===== SECTION TITLE ===== */
-.title{
-text-align:center;
-padding:70px 20px 25px;
-}
+/* SECTION TITLE */
+.section-title{text-align:center;padding:70px 0 30px}
+.section-title h2{font-size:52px;font-weight:800}
+.section-title p{opacity:.7}
 
-.title h2{
-font-size:42px;
-font-weight:800;
-}
-
-/* ===== PORTFOLIO ===== */
-.portfolio{
-padding:20px 7% 70px;
+/* PORTFOLIO */
+.grid-2{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:22px;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
-
 .card{
-background:#0b1535;
-border-radius:18px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
+background:#08142f;border-radius:18px;overflow:hidden;
+border:1px solid rgba(255,255,255,.08)
 }
+.card img{width:100%;height:300px;object-fit:cover}
+.card h3{padding:18px;font-size:28px}
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
+/* PRICING */
+.pricing-title{text-align:center;margin-bottom:40px}
+.pricing-badge{
+display:inline-block;
+padding:8px 20px;border-radius:30px;
+border:1px solid rgba(255,170,0,.4);
+color:#ffb020;margin-bottom:15px;
 }
-
-.card h3{
-padding:18px;
-font-size:20px;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 35px rgba(0,0,0,.45);
-}
-
-/* ===== PROCESS ===== */
-.process{
-padding:20px 7% 80px;
+.pricing-title h2{font-size:58px;font-weight:800}
+.pricing-title span{color:#ffb020}
+.pricing-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:20px;
 }
-
-.step{
-background:#0b1535;
-padding:25px;
-border-radius:16px;
-text-align:center;
-border:1px solid rgba(255,255,255,.08);
+.price-card{
+border-radius:20px;padding:30px;
 }
-
-.step h4{
-color:#ffb020;
-margin-bottom:12px;
+.price-card.dark{
+background:#08142f;border:1px solid rgba(255,255,255,.08)
 }
-
-/* ===== PRICING ===== */
-.pricing{
-padding:20px 7% 80px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
-}
-
-.plan{
-background:#0b1535;
-padding:32px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.1);
-transition:.3s;
-}
-
-.plan.popular{
+.price-card.pro{
 background:#ff9f1a;
 transform:scale(1.03);
+position:relative;
 }
-
-.plan h3{
-font-size:28px;
-margin-bottom:10px;
+.popular{
+position:absolute;top:-16px;left:50%;
+transform:translateX(-50%);
+background:#071330;
+padding:8px 20px;border-radius:30px;
+border:2px solid #ffb020;font-size:14px;
 }
+.price-card h1{font-size:58px;margin:15px 0}
+.price-card ul{list-style:none;margin:20px 0}
+.price-card ul li{margin-bottom:10px}
+.price-card button{
+width:100%;padding:12px;border:none;
+background:#1a2948;color:#fff;border-radius:10px
+}
+.white-btn{background:white;color:#ff9f1a}
 
-.price{
-font-size:40px;
+/* PROCESS */
+.process-title{text-align:center;margin:70px 0 35px}
+.process-title h2{font-size:56px}
+.process-title span{color:#3ea9ff}
+.process-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.process-card{
+border-radius:18px;
+padding:26px;
+position:relative;
+border:1px solid rgba(255,255,255,.1);
+}
+.step-number{
+position:absolute;
+top:5px;left:15px;
+font-size:80px;
+opacity:.05;
 font-weight:800;
-margin-bottom:18px;
 }
+.process-card h3{font-size:30px;margin:10px 0}
+.process-card p{font-size:20px;opacity:.85}
+.orange-card{background:rgba(255,150,40,.15)}
+.blue-card{background:rgba(40,150,255,.18)}
+.green-card{background:rgba(30,220,150,.15)}
 
-.plan p{
-margin-bottom:8px;
+/* WHY SECTION */
+.why-title{text-align:center;margin:80px 0 35px}
+.why-title h2{font-size:56px}
+.why-title span{
+background:linear-gradient(90deg,#8f6dff,#ff6ed1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
+.why-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.why-card{
+border-radius:18px;padding:25px;
+background:#08142f;border:1px solid rgba(255,255,255,.1)
+}
+.why-card h3{font-size:30px;margin:10px 0}
+.why-card p{font-size:20px;opacity:.8}
+.tint1{background:rgba(255,140,50,.12)}
+.tint2{background:rgba(40,150,255,.15)}
+.tint3{background:rgba(20,220,160,.12)}
+.tint4{background:rgba(180,90,255,.13)}
+.tint5{background:rgba(255,80,130,.12)}
+.tint6{background:rgba(0,180,255,.12)}
 
-/* ===== CTA ===== */
-.cta{
-margin:60px 7%;
-background:#ff9f1a;
-padding:60px 20px;
-border-radius:20px;
+/* CTA */
+.bigcta{
+margin:80px 0 0;
+background:#ff9311;
+padding:70px 20px;
 text-align:center;
 }
+.bigcta h2{font-size:56px}
+.bigcta p{font-size:22px;margin:15px 0}
 
-.cta h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.cta .btn{
-background:#081530;
-}
-
-/* ===== FOOTER ===== */
-footer{
-background:#030814;
-padding:50px 7%;
+/* FOOTER */
+footer{background:#030814;padding:45px 0}
+.footer-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
+footer a{display:block;color:#ccc;text-decoration:none;margin:6px 0}
 
-footer h4{
-margin-bottom:12px;
-color:#ffb020;
+/* MOBILE */
+@media(max-width:950px){
+.menu{display:none}
+.hero h1{font-size:36px}
+.features-container,.pricing-grid,.process-grid,.why-grid,.footer-grid,.grid-2{
+grid-template-columns:1fr;
 }
-
-footer a{
-display:block;
-text-decoration:none;
-color:#ddd;
-margin-bottom:8px;
-opacity:.85;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-.hero h1{
-font-size:34px;
-}
-
-.title h2{
-font-size:30px;
-}
-
-.nav-links{
-display:none;
-}
-
-nav{
-padding:15px 5%;
-}
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
+<div class="container nav-wrap">
 <div class="logo">EMPIRE SITES</div>
-<div class="nav-links">
-<a href="#">Demos</a>
-<a href="#">Pricing</a>
-<a href="#">Process</a>
-<a href="#">Contact</a>
+<div class="menu">
+<a href="#">Demos</a><a href="#">Pricing</a><a href="#">Process</a><a href="#">Contact</a>
 </div>
-<a href="#" class="btn">Get Started</a>
+<a class="cta" href="https://wa.me/918356873821">Get Started</a>
+</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Transform Your <span>Local Business</span> Into A Digital Empire</h1>
-<p>We build high-converting premium websites that help local brands dominate online.</p>
-<div class="hero-buttons">
-<a href="#" class="btn">View Demos</a>
-<a href="#" class="btn" style="background:#0b1535">Start Project</a>
+<div class="container">
+<div class="badge">✦ Premium Digital Agency</div>
+<h1>Transform Your <span class="orange">Local Business</span><br>Into A <span class="blue">Digital Empire</span></h1>
+<p>We craft stunning, high-conversion websites that make your business stand out.</p>
+<div class="hero-btns">
+<a class="btn1">View Our Work</a>
+<a class="btn2">Start Your Project</a>
+</div>
 </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-<div class="stat">⚡ Fast Delivery</div>
-<div class="stat">📱 Mobile Optimized</div>
-<div class="stat">🎨 Premium Design</div>
-<div class="stat">🚀 Conversion Focused</div>
-</section>
-
-<!-- PORTFOLIO -->
-<div class="title">
-<h2>Our Websites</h2>
-</div>
-
-<section class="portfolio">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f">
-<h3>SEM Fitness Academy</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
-<h3>KEFI Café</h3>
+<section class="features-section container">
+<div class="features-container">
+<div class="feature-box"><div class="icon orange-bg">⏱</div><h3>24–48 Hour Delivery</h3></div>
+<div class="feature-box"><div class="icon blue-bg">📱</div><h3>Mobile Perfected</h3></div>
+<div class="feature-box"><div class="icon pink-bg">🎖</div><h3>Premium Design</h3></div>
+<div class="feature-box"><div class="icon green-bg">📈</div><h3>High Conversion</h3></div>
 </div>
 </section>
 
-<!-- PROCESS -->
-<div class="title">
-<h2>Our Process</h2>
+<section class="container">
+<div class="section-title"><h2>Premium Websites</h2></div>
+<div class="grid-2">
+<div class="card"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f"><h3>SEM Fitness Academy</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"><h3>KEFI Boutique Café</h3></div>
 </div>
-
-<section class="process">
-<div class="step"><h4>1. Strategy</h4><p>Understanding your business and goals.</p></div>
-<div class="step"><h4>2. Design</h4><p>Creating premium modern layouts.</p></div>
-<div class="step"><h4>3. Development</h4><p>Fast, responsive website build.</p></div>
-<div class="step"><h4>4. Launch</h4><p>Go live and start getting leads.</p></div>
 </section>
 
-<!-- PRICING -->
-<div class="title">
-<h2>Pricing</h2>
+<section class="container" style="padding-top:80px">
+<div class="pricing-title">
+<div class="pricing-badge">💲 Transparent Pricing</div>
+<h2>Investment In Your <span>Success</span></h2>
+<p>Premium quality at prices that make sense</p>
 </div>
 
-<section class="pricing">
-
-<div class="plan">
-<h3>Starter</h3>
-<div class="price">₹1,999</div>
-<p>Single page</p>
-<p>Mobile responsive</p>
-<p>Fast delivery</p>
+<div class="pricing-grid">
+<div class="price-card dark"><h4>STARTER</h4><h1>₹1,999</h1><ul><li>✔ One-page website</li><li>✔ Mobile responsive</li><li>✔ Contact buttons</li></ul><button>Get Started</button></div>
+<div class="price-card pro"><div class="popular">★ MOST POPULAR</div><h4>PRO</h4><h1>₹2,999</h1><ul><li>✔ Everything in Starter</li><li>✔ Dedicated section</li><li>✔ Testimonials</li><li>✔ Premium design</li></ul><button class="white-btn">Start Now</button></div>
+<div class="price-card dark"><h4>PREMIUM</h4><h1>₹5,999</h1><ul><li>✔ Everything in Pro</li><li>✔ Branding package</li><li>✔ Advanced layout</li></ul><button>Get Started</button></div>
 </div>
-
-<div class="plan popular">
-<h3>Pro</h3>
-<div class="price">₹2,999</div>
-<p>Premium layout</p>
-<p>Animations</p>
-<p>Social integration</p>
-</div>
-
-<div class="plan">
-<h3>Premium</h3>
-<div class="price">₹5,999</div>
-<p>Advanced design</p>
-<p>Branding layout</p>
-<p>Priority support</p>
-</div>
-
 </section>
 
-<!-- CTA -->
-<section class="cta">
-<h2>Ready To Build Your Empire?</h2>
-<p>Let’s launch your premium website today.</p>
-<br>
-<a href="#" class="btn">Contact Now</a>
+<section class="container">
+<div class="process-title"><h2>Simple <span>Process</span></h2><p>Your website in three easy steps</p></div>
+<div class="process-grid">
+<div class="process-card orange-card"><div class="step-number">01</div><h3>Share Your Vision</h3><p>Tell us about your business via WhatsApp</p></div>
+<div class="process-card blue-card"><div class="step-number">02</div><h3>We Build Magic</h3><p>Our team crafts your stunning website</p></div>
+<div class="process-card green-card"><div class="step-number">03</div><h3>Launch & Grow</h3><p>Go live and watch your business soar</p></div>
+</div>
 </section>
 
-<!-- FOOTER -->
+<section class="container">
+<div class="why-title"><h2>Why <span>Empire Sites</span></h2><p>Built for excellence, designed for your success</p></div>
+<div class="why-grid">
+<div class="why-card tint1"><h3>Premium Design</h3><p>Agency-quality websites that command respect</p></div>
+<div class="why-card tint2"><h3>Lightning Fast</h3><p>24-48 hour delivery, guaranteed</p></div>
+<div class="why-card tint3"><h3>Fair Pricing</h3><p>Premium quality without premium price</p></div>
+<div class="why-card tint4"><h3>Direct Support</h3><p>Quick WhatsApp support when needed</p></div>
+<div class="why-card tint5"><h3>Mobile Perfect</h3><p>Flawless on every device</p></div>
+<div class="why-card tint6"><h3>Local Focus</h3><p>Designed for local businesses</p></div>
+</div>
+</section>
+
+<section class="bigcta">
+<h2>Ready To Dominate Your Market?</h2>
+<p>Message us on WhatsApp</p>
+<a class="btn1" href="https://wa.me/918356873821">WhatsApp Now</a>
+</section>
+
 <footer>
-<div>
-<h4>Empire Sites</h4>
-<p>Building digital empires for local businesses.</p>
+<div class="container footer-grid">
+<div><h4>Empire Sites</h4><p>Transforming local businesses into digital empires</p></div>
+<div><h4>Quick Links</h4><a>Demos</a><a>Pricing</a></div>
+<div><h4>Services</h4><a>Website Design</a><a>Branding</a></div>
+<div><h4>Contact</h4>
+<a href="tel:+918356873821">📞 8356873821</a>
+<a href="https://wa.me/918356873821">WhatsApp</a>
+<a href="https://www.instagram.com/empire.sites?igsh=bWlmaDM3NTg3ZGEy">Instagram</a>
 </div>
-
-<div>
-<h4>Links</h4>
-<a href="#">Demos</a>
-<a href="#">Pricing</a>
-<a href="#">Process</a>
-</div>
-
-<div>
-<h4>Services</h4>
-<a href="#">Website Design</a>
-<a href="#">Branding</a>
-<a href="#">Mobile Optimization</a>
-</div>
-
-<div>
-<h4>Contact</h4>
-<a href="#">+91 83568 73821</a>
-<a href="#">WhatsApp</a>
-<a href="#">Instagram</a>
 </div>
 </footer>
 
